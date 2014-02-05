@@ -15,6 +15,7 @@ namespace eCommerce.Data.Context
         public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

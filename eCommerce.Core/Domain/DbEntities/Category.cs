@@ -14,7 +14,7 @@ namespace eCommerce.Core.Domain.DbEntities
         public string ProfileImgUrl { get; set; }
         public int? ParentId { get; set; }
 
-        public virtual Category Category { get; set; }
+        public virtual Category Parent { get; set; }
 
         public virtual ICollection<Category> Children { get; set; }
         public virtual ICollection<Product> Products { get; set; }
