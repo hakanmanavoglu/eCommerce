@@ -4,9 +4,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace eCommerce.Data.Context
 {
-    public class eCommerceDbContext : DbContext
+    public class eCommerceContext : DbContext
     {
-        public eCommerceDbContext()
+        public eCommerceContext()
             : base("DefaultConnection")
         {
             Configuration.LazyLoadingEnabled = true;
@@ -14,6 +14,7 @@ namespace eCommerce.Data.Context
 
         public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
+        public DbSet<Product> Product { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

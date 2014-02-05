@@ -8,13 +8,13 @@ namespace eCommerce.Data.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly eCommerceDbContext _context;
+        private readonly eCommerceContext _context;
         private bool disposed = false;
 
-        public UnitOfWork(eCommerceDbContext context)
+        public UnitOfWork(eCommerceContext context)
         {
             // veritabanında değişiklik olursa, değişikliği kaydet
-            Database.SetInitializer<eCommerceDbContext>(null);
+            Database.SetInitializer<eCommerceContext>(null);
 
             if (context == null)
                 throw new ArgumentNullException("context");

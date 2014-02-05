@@ -6,10 +6,10 @@ namespace eCommerce.Data.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        private readonly eCommerceDbContext _context;
+        private readonly eCommerceContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public GenericRepository(eCommerceDbContext context)
+        public GenericRepository(eCommerceContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();

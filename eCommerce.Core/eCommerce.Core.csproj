@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\DbEntities\BaseEntity.cs" />
+    <Compile Include="Domain\DbEntities\Category.cs" />
+    <Compile Include="Domain\DbEntities\Product.cs" />
     <Compile Include="Domain\DbEntities\Role.cs" />
     <Compile Include="Domain\DbEntities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
