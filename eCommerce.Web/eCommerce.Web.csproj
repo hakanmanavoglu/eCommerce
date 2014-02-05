@@ -168,7 +168,32 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\eCommerce.Core\eCommerce.Core.csproj">
+      <Project>{961e20c7-0095-41db-90a0-7765cdbcdb51}</Project>
+      <Name>eCommerce.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Data\eCommerce.Data.csproj">
+      <Project>{80308c70-c4de-4418-b110-3386081ccb72}</Project>
+      <Name>eCommerce.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.IOC\eCommerce.IOC.csproj">
+      <Project>{28e059a1-dd2d-4fec-841a-737d9d04534a}</Project>
+      <Name>eCommerce.IOC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Service\eCommerce.Service.csproj">
+      <Project>{65ee9754-06c4-4849-91fd-d9d094541923}</Project>
+      <Name>eCommerce.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Utilities\eCommerce.Utilities.csproj">
+      <Project>{170035ee-629b-418a-9785-ec707914b7d3}</Project>
+      <Name>eCommerce.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Web.Framework\eCommerce.Web.Framework.csproj">
+      <Project>{41ea577b-3901-4ce3-a3b7-6a15d941773a}</Project>
+      <Name>eCommerce.Web.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

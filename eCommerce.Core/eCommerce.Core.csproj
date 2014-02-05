@@ -39,10 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\DbEntities\BaseEntity.cs" />
+    <Compile Include="Domain\DbEntities\Role.cs" />
+    <Compile Include="Domain\DbEntities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\DbEntities\" />
     <Folder Include="Domain\DTOs\" />
     <Folder Include="Domain\Enums\" />
   </ItemGroup>
