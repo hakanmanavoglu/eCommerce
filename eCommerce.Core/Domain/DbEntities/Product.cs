@@ -1,7 +1,13 @@
-﻿namespace eCommerce.Core.Domain.DbEntities
+﻿using System.Collections.Generic;
+namespace eCommerce.Core.Domain.DbEntities
 {
     public class Product : BaseEntity
     {
+        public Product()
+        {
+            ProductFeatureValues = new HashSet<ProductFeatureValue>();
+        }
+
         public string Name { get; set; }
         public string SeoName { get; set; }
         public string ProfileImgUrlOriginal { get; set; }
@@ -23,5 +29,7 @@
         public string PriceCurrency { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public virtual ICollection<ProductFeatureValue> ProductFeatureValues { get; set; }
     }
 }
