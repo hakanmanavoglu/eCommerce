@@ -1,7 +1,7 @@
 ﻿using eCommerce.Web.Framework.Models;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using System.Linq;
+using System.Web.Mvc;
 
 namespace eCommerce.Web.Framework.Extensions.HtmlHelpers
 {
