@@ -1,0 +1,14 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Admin"))
+    {
+        <li><a href="@Url.Action("Index", "AdminHome", new { area = "Admin" })">Yönetici</a></li>
+    }
+    <li><a href="@Url.Action("Manage", "Account", new { area = "" })">@User.Identity.Name</a></li>
+    <li><a href="@Url.Action("Logoff", "Account", new { area = "" })">Çıkış</a></li>
+}
+else
+{
+    <li><a href="@Url.Action("Login", "Account", new { area = "" })">Giriş</a></li>
+    <li><a href="@Url.Action("Register", "Account", new { area = "" })">Kayıt</a></li>
+}

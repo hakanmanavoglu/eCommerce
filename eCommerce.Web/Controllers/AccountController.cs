@@ -47,7 +47,7 @@ namespace eCommerce.Web.Controllers
                     };
 
                     _userService.Insert(user);
-                    _userService.SendConfirmationMail(user, Request.Url.GetLeftPart(UriPartial.Authority));
+                    //_userService.SendConfirmationMail(user, Request.Url.GetLeftPart(UriPartial.Authority));
                     _uow.SaveChanges();
 
                     return RedirectToAction("Index", "Home");

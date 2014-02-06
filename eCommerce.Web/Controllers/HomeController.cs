@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using eCommerce.Data.UnitOfWork;
+using eCommerce.Web.Framework.Controllers;
 using System.Web.Mvc;
 
 namespace eCommerce.Web.Controllers
 {
-    public partial class HomeController : Controller
+    public partial class HomeController : NoAuthorizedController
     {
+        public HomeController(IUnitOfWork uow)
+            : base(uow)
+        {
+        }
+
         public virtual ActionResult Index()
         {
             return View();
