@@ -1,6 +1,7 @@
 ﻿using eCommerce.Core.Domain.DbEntities;
 using eCommerce.Data.Repositories;
 using eCommerce.Data.UnitOfWork;
+using System;
 using System.Linq;
 using System.Net.Mail;
 namespace eCommerce.Service.UserServices
@@ -28,12 +29,49 @@ namespace eCommerce.Service.UserServices
         }
 
         /// <summary>
+        /// Kullanıcı bul.
+        /// </summary>
+        /// <param name="confirmationId"></param>
+        /// <returns></returns>
+        public User FindByConfirmationId(Guid confirmationId)
+        {
+            return _userRepository.GetAll().FirstOrDefault(x => x.ConfirmationId == confirmationId);
+        }
+
+        /// <summary>
         /// Kullanıcı ekle.
         /// </summary>
         /// <param name="user"></param>
         public void Insert(User user)
         {
             _userRepository.Insert(user);
+        }
+
+        /// <summary>
+        /// Kullanıcı güncelle.
+        /// </summary>
+        /// <param name="user"></param>
+        public void Update(User user)
+        {
+            _userRepository.Update(user);
+        }
+
+        /// <summary>
+        /// Kullanıcı sil.
+        /// </summary>
+        /// <param name="user">Kullanıcı</param>
+        public void Delete(User user)
+        {
+            _userRepository.Delete(user);
+        }
+
+        /// <summary>
+        /// Kullanıcı sil.
+        /// </summary>
+        /// <param name="userId">Kullanıcı Id</param>
+        public void Delete(int userId)
+        {
+            _userRepository.Delete(userId);
         }
 
         /// <summary>
@@ -66,6 +104,26 @@ namespace eCommerce.Service.UserServices
             }
 
             return status;
+        }
+
+        /// <summary>
+        /// Eposta sistemde kayıtlı mı.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public bool ValidateEmail(string email)
+        {
+            return _userRepository.GetAll().Any(x => x.Email == email);
+        }
+
+        /// <summary>
+        /// Kullanıcı adı sistemde kayıtlı mı.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public bool ValidateUserName(string userName)
+        {
+            return _userRepository.GetAll().Any(x => x.UserName == userName);
         }
     }
 }
