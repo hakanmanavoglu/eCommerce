@@ -1,4 +1,15 @@
-﻿body {
+﻿/* bootstrap overriding
+-------------------------------------------------------------------------------------*/
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #428bca;
+}
+
+/* defaults
+-------------------------------------------------------------------------------------*/
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
