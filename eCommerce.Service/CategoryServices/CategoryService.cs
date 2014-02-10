@@ -3,7 +3,7 @@ using eCommerce.Data.Repositories;
 using eCommerce.Data.UnitOfWork;
 using System.Linq;
 
-namespace eCommerce.Service.CategoryService
+namespace eCommerce.Service.CategoryServices
 {
     public class CategoryService : ICategoryService
     {

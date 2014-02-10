@@ -1,6 +1,6 @@
 ﻿using eCommerce.Core.Domain.DbEntities;
 using System.Linq;
-namespace eCommerce.Service.CategoryService
+namespace eCommerce.Service.CategoryServices
 {
     public interface ICategoryService
     {

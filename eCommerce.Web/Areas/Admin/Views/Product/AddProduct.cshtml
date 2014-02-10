@@ -4,11 +4,16 @@
     ViewBag.Title = "AddProduct";
 }
 
-
 @using (Html.BeginForm("AddProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
+    if (TempData["MessagesForView"] != null) { 
+        <div>
+            @TempData["MessagesForView"]
+        </div>
+    }
+    
     <div class="form-horizontal">
         <h4>Ürün Ekleme</h4>
         <hr />
@@ -73,7 +78,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DiscountRate, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DiscountRate, new { @class = "form-control", @type = "number", @min = 1 })
+                @Html.TextBoxFor(model => model.DiscountRate, new { @class = "form-control", @type = "number"})
                 @Html.ValidationMessageFor(model => model.DiscountRate)
             </div>
         </div>
@@ -81,7 +86,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Discount, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control", @type = "number", @min = 1 })
+                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control", @type = "number" })
                 @Html.ValidationMessageFor(model => model.Discount)
             </div>
         </div>
@@ -109,6 +114,8 @@
                 @Html.ValidationMessageFor(model => model.IsActive)
             </div>
         </div>
+
+        <input type="submit" value="Kaydet" class="btn btn-primary" />
     </div>
 }
 
