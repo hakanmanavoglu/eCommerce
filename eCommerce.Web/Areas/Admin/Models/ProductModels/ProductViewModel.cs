@@ -51,7 +51,9 @@ namespace eCommerce.Web.Areas.Admin.Models.ProductModels
         [Display(Name = "Kategori")]
         public int CategoryId { get; set; }
 
-        public virtual IEnumerable<string> PriceCurrencies { get; set; }
+        [Display(Name = "Yayında?")]
+        public bool IsActive { get; set; }
+
         public virtual IEnumerable<Category> Categories { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 using eCommerce.Core.Domain.DbEntities;
 using eCommerce.Data.Repositories;
 using eCommerce.Data.UnitOfWork;
+using eCommerce.Service.CategoryService;
 using Microsoft.Practices.Unity;
 using System.Web.Mvc;
 using Unity.Mvc5;
@@ -31,6 +32,7 @@ namespace eCommerce.IOC
 
             //container.BindInRequestScope<IUserService, UserService>();
             //container.BindInRequestScope<IRoleService, RoleService>();
+            container.BindInRequestScope<ICategoryService, CategoryService>();
         }
     }
 

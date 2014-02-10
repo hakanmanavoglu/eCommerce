@@ -32,7 +32,6 @@ namespace eCommerce.Web.Controllers
             {
                 try
                 {
-
                     User user = new User
                     {
                         ConfirmationId = Guid.NewGuid(),
