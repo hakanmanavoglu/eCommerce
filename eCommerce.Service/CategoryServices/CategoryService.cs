@@ -24,5 +24,14 @@ namespace eCommerce.Service.CategoryServices
         {
             return _categoryRepository.GetAll();
         }
+
+        /// <summary>
+        /// Kategori ekle.
+        /// </summary>
+        /// <param name="category"></param>
+        public void Insert(Category category)
+        {
+            _categoryRepository.Insert(category);
+        }
     }
 }

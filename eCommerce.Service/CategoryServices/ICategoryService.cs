@@ -9,5 +9,11 @@ namespace eCommerce.Service.CategoryServices
         /// </summary>
         /// <returns></returns>
         IQueryable<Category> GetAll();
+
+        /// <summary>
+        /// Kategori ekle.
+        /// </summary>
+        /// <param name="category"></param>
+        void Insert(Category category);
     }
 }
