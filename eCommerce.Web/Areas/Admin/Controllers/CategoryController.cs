@@ -51,7 +51,7 @@ namespace eCommerce.Web.Areas.Admin.Controllers
                 if (image != null && image.ContentLength > 0)
                 {
                     // resmin ismini değiştir.
-                    var fileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(image.FileName);
+                    var fileName = category.SeoName + System.IO.Path.GetExtension(image.FileName);
 
                     // dosya dizinlerinin yollarını oluştur.
                     var originalImageFolder = Server.MapPath("~/Content/Images/uploads/Category");
