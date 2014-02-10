@@ -81,7 +81,7 @@ namespace eCommerce.Web.Areas.Admin.Controllers
                 }
             }
 
-            return View();
+            return View(model);
         }
     }
 }
