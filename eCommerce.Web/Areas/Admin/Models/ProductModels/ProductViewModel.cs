@@ -38,6 +38,7 @@ namespace eCommerce.Web.Areas.Admin.Models.ProductModels
         [Display(Name = "İndirim Yüzde")]
         public float DiscountRate { get; set; }
 
+        [Required(ErrorMessage = "{0} alanı gereklidir!")]
         [Display(Name = "Eski Fiyat")]
         public float OldPrice { get; set; }
 

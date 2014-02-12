@@ -47,7 +47,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Quantity, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control", @type = "number", @min = 1 })
+                @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Quantity)
             </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.OldPrice, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.OldPrice, new { @class = "form-control", @type = "number", @min = 1 })
+                @Html.TextBoxFor(model => model.OldPrice, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.OldPrice)
             </div>
         </div>
@@ -79,7 +79,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DiscountRate, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DiscountRate, new { @class = "form-control", @type = "number" })
+                @Html.TextBoxFor(model => model.DiscountRate, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.DiscountRate)
             </div>
         </div>
@@ -87,7 +87,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Discount, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control", @type = "number" })
+                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Discount)
             </div>
         </div>
@@ -95,7 +95,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NewPrice, new { @class = "col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.NewPrice, new { @class = "form-control", @type = "number", @min = 1 })
+                @Html.TextBoxFor(model => model.NewPrice, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.NewPrice)
             </div>
         </div>

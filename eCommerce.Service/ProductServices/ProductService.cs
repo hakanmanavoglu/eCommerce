@@ -1,6 +1,7 @@
 ﻿using eCommerce.Core.Domain.DbEntities;
 using eCommerce.Data.Repositories;
 using eCommerce.Data.UnitOfWork;
+using System.Linq;
 
 namespace eCommerce.Service.ProductServices
 {
@@ -22,6 +23,15 @@ namespace eCommerce.Service.ProductServices
         public void Insert(Product product)
         {
             _productRepository.Insert(product);
+        }
+
+        /// <summary>
+        /// Tüm ürünler.
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<Product> GetAll()
+        {
+            return _productRepository.GetAll();
         }
     }
 }
