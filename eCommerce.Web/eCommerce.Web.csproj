@@ -177,6 +177,7 @@
     <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Products.cshtml" />
     <Content Include="Grid.mvc.readme" />
+    <Content Include="Areas\Admin\Views\Product\EditProduct.cshtml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />

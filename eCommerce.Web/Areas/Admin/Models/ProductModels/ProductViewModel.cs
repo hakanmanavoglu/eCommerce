@@ -7,13 +7,17 @@ namespace eCommerce.Web.Areas.Admin.Models.ProductModels
 {
     public class ProductViewModel
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "{0} alanı gereklidir!")]
         [Display(Name = "Ürün Adı")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "{0} alanı gereklidir!")]
         [Display(Name = "Ürün Resim")]
-        public HttpPostedFileBase ProfileImgUrlOriginal { get; set; }
+        public HttpPostedFileBase ProfileImgOriginal { get; set; }
+
+        public string ProfileImgUrlOriginal { get; set; }
 
         [Display(Name = "Seri No")]
         public string SerialNo { get; set; }

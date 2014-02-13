@@ -43,6 +43,7 @@
     <Compile Include="Domain\DbEntities\Category.cs" />
     <Compile Include="Domain\DbEntities\Product.cs" />
     <Compile Include="Domain\DbEntities\ProductFeature.cs" />
+    <Compile Include="Domain\DbEntities\ProductFeatureOption.cs" />
     <Compile Include="Domain\DbEntities\ProductFeatureValue.cs" />
     <Compile Include="Domain\DbEntities\Role.cs" />
     <Compile Include="Domain\DbEntities\User.cs" />

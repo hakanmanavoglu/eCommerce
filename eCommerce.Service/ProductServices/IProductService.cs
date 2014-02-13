@@ -16,5 +16,12 @@ namespace eCommerce.Service.ProductServices
         /// </summary>
         /// <returns></returns>
         IQueryable<Product> GetAll();
+
+        /// <summary>
+        /// Ürün bul.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Product Find(int id);
     }
 }

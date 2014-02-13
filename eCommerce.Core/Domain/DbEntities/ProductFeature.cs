@@ -6,10 +6,12 @@ namespace eCommerce.Core.Domain.DbEntities
         public ProductFeature()
         {
             ProductFeatureValues = new HashSet<ProductFeatureValue>();
+            ProductFeatureOptions = new HashSet<ProductFeatureOption>();
         }
 
         public string Name { get; set; }
 
         public virtual ICollection<ProductFeatureValue> ProductFeatureValues { get; set; }
+        public virtual ICollection<ProductFeatureOption> ProductFeatureOptions { get; set; }
     }
 }

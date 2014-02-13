@@ -1,10 +1,10 @@
 ﻿@model eCommerce.Web.Areas.Admin.Models.ProductModels.ProductViewModel
 
 @{
-    ViewBag.Title = "Add Product";
+    ViewBag.Title = "Edit Product";
 }
 
-@using (Html.BeginForm("AddProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("EditProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -19,6 +19,7 @@
         <h4>Ürün Ekleme</h4>
         <hr />
         @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, new { @class = "col-md-2" })

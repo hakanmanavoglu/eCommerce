@@ -27,6 +27,7 @@ namespace eCommerce.Core.Domain.DbEntities
         public float OldPrice { get; set; }
         public float NewPrice { get; set; }
         public string PriceCurrency { get; set; }
+        public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; }
 

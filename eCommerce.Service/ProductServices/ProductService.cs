@@ -33,5 +33,15 @@ namespace eCommerce.Service.ProductServices
         {
             return _productRepository.GetAll();
         }
+
+        /// <summary>
+        /// Ürün bul.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Product Find(int id)
+        {
+            return _productRepository.Find(id);
+        }
     }
 }
